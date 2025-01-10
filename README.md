@@ -20,27 +20,22 @@ cd AI-flashcard-deepseek
 npm install
 ```
 
-2. 配置环境变量：
-
-创建 `.env` 文件并添加以下内容：
-```
-DEEPSEEK_API_KEY=你的API密钥
-```
-
-3. 运行开发服务器：
+2. 运行开发服务器：
 
 ```bash
 npm run dev
 ```
 
-访问 [http://localhost:3000](http://localhost:3000) 即可使用应用。
+3. 配置API密钥：
+
+访问 [http://localhost:3000](http://localhost:3000)，点击右上角的设置图标，在设置页面中输入您的Deepseek API密钥并保存。
 
 ## 技术栈
 
 - [Next.js 14](https://nextjs.org/) - React框架
 - [Tailwind CSS](https://tailwindcss.com/) - 样式框架
 - [SQLite](https://www.sqlite.org/) - 本地数据存储
-- [Deepseek API](https://api.deepseek.com/) - AI服务
+- [Deepseek API](https://www.deepseek.com/) - AI服务
 
 ## 贡献
 
