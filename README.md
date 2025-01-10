@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI闪卡学习助手
 
-## Getting Started
+这是一个基于Next.js和Deepseek API开发的智能闪卡学习工具。它能帮助用户创建、管理和复习学习卡片，通过AI技术提供智能的学习体验。
 
-First, run the development server:
+## 主要功能
+
+- 🤖 AI辅助生成闪卡：利用Deepseek API自动生成高质量的学习卡片
+- 📚 话题探索：浏览和学习各种领域的知识
+- ✨ 智能复习：根据学习进度安排复习计划
+- 📝 卡片管理：导入/导出和管理已标记的卡片
+- 🎨 现代UI：使用Tailwind CSS构建的美观界面
+
+## 开始使用
+
+1. 克隆项目并安装依赖：
+
+```bash
+git clone https://github.com/nicekate/AI-flashcard-deepseek.git
+cd AI-flashcard-deepseek
+npm install
+```
+
+2. 配置环境变量：
+
+创建 `.env` 文件并添加以下内容：
+```
+DEEPSEEK_API_KEY=你的API密钥
+```
+
+3. 运行开发服务器：
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+访问 [http://localhost:3000](http://localhost:3000) 即可使用应用。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 技术栈
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- [Next.js 14](https://nextjs.org/) - React框架
+- [Tailwind CSS](https://tailwindcss.com/) - 样式框架
+- [SQLite](https://www.sqlite.org/) - 本地数据存储
+- [Deepseek API](https://api.deepseek.com/) - AI服务
 
-## Learn More
+## 贡献
 
-To learn more about Next.js, take a look at the following resources:
+欢迎提交Issue和Pull Request！
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 许可
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT License
