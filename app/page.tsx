@@ -35,7 +35,7 @@ export default function Home() {
     try {
       const response = await fetch('/api/marked-cards');
       const data = await response.json();
-      const marked = new Set(data.markedCards.map((card: any) => card.question));
+      const marked = new Set(data.markedCards.map((card) => card.question));
       setMarkedCards(marked);
     } catch (error) {
       console.error('获取标记卡片失败:', error);

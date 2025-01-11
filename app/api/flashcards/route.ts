@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getDeepseekFlashcards } from '@/lib/deepseek';
 
-const DEEPSEEK_API_URL = 'https://api.deepseek.com/v1/chat/completions';
 
 export async function POST(request: Request) {
   try {
@@ -64,10 +63,10 @@ export async function POST(request: Request) {
 
     const flashcards = await getDeepseekFlashcards(prompt, systemPrompt, apiKey);
     return NextResponse.json({ flashcards });
-  } catch (error: any) {
+  } catch (error) {
     console.error('生成闪卡失败:', error);
     return NextResponse.json(
-      { error: error.message || '生成闪卡失败' },
+      { error: (error as Error).message || '生成闪卡失败' },
       { status: 500 }
     );
   }

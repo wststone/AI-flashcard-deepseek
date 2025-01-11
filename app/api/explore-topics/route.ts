@@ -26,10 +26,10 @@ export async function POST(request: NextRequest) {
     const topics = response.split('\n').filter(topic => topic.trim());
 
     return NextResponse.json({ topics });
-  } catch (error: any) {
+  } catch (error) {
     console.error('探索主题失败:', error);
     return NextResponse.json(
-      { error: error.message || '探索主题失败' },
+      { error: (error as Error).message || '探索主题失败' },
       { status: 500 }
     );
   }

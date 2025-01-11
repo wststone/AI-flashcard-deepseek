@@ -39,7 +39,7 @@ export default function ReviewCards({ onCardRemoved }: ReviewCardsProps) {
         handleNext();
       } else if (event.key === ' ') {
         // 添加空格键事件监听
-        const currentCard = markedCards[currentCardIndex];
+        // const currentCard = markedCards[currentCardIndex];
         // TODO: 调用 FlashCard 组件的 toggleAnswer 方法
       }
     };

@@ -33,7 +33,7 @@ export async function getDeepseekCompletion(prompt: string, apiKey: string): Pro
   return data.choices[0].message.content.trim();
 }
 
-export async function getDeepseekFlashcards(prompt: string, systemPrompt: string, apiKey: string): Promise<any> {
+export async function getDeepseekFlashcards(prompt: string, systemPrompt: string, apiKey: string): Promise<{question: string, answer: string}[]> {
   const response = await fetch(DEEPSEEK_API_URL, {
     method: 'POST',
     headers: {
