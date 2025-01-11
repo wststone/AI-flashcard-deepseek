@@ -1,7 +1,7 @@
 import sqlite3 from 'better-sqlite3';
 
 
-const db = sqlite3(':memory');
+const db = sqlite3(':memory:');
 
 // 初始化数据库表
 db.exec(`
