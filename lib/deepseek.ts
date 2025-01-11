@@ -67,7 +67,7 @@ export async function getDeepseekFlashcards(prompt: string, systemPrompt: string
   
   try {
     return JSON.parse(content);
-  } catch (error) {
+  } catch {
     console.error('解析JSON失败:', content);
     throw new Error('AI返回的数据格式不正确');
   }
