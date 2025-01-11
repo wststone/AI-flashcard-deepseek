@@ -1,14 +1,7 @@
 import sqlite3 from 'better-sqlite3';
-import path from 'path';
-import fs from 'fs';
 
-// 确保数据库目录存在
-const DB_DIR = path.join(process.cwd(), '.local');
-if (!fs.existsSync(DB_DIR)) {
-  fs.mkdirSync(DB_DIR, { recursive: true });
-}
 
-const db = sqlite3(path.join(DB_DIR, 'flashcards.db'));
+const db = sqlite3(':memory');
 
 // 初始化数据库表
 db.exec(`
